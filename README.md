@@ -1,2 +1,3 @@
 # Captcha-Harvester
-c# Captcha Harvester
+  - Needs to add proxy support
+  - Built with cefsharp
