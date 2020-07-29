@@ -90,7 +90,7 @@ namespace CookieMonster.SpoofBrowser.CaptchaSolver
                 if (response.Success && response.Result != null)
                 {
                     var startDate = response.Result;
-                    if (startDate.ToString() == "true" || startDate.ToString() == "True")
+                    if (startDate.ToString() == "true")
                     {
                         CaptchaResponse();
                     }
