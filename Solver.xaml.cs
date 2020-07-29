@@ -145,29 +145,5 @@ namespace CookieMonster.SpoofBrowser.CaptchaSolver
         }
         public bool WaitingForSolve = false;
         private string SiteKey;
-
-        //public bool NewLoad(string Site, string SiteKey, System.Net.CookieContainer RequestCookies)
-        //{
-        //    if (WaitingForSolve == false)
-        //    {
-        //        WaitingForSolve = true;
-        //        CaptchaToken = string.Empty;
-        //        this.SiteKey = SiteKey;
-
-        //        chromeBrowser.Address = Site;
-        //        InitialLoad = 0;
-        //        chromeBrowser.GetBrowser().Reload(true);                
-        //        return true;
-        //    }
-        //    else
-        //    {
-        //        return false;
-        //    }
-        //}
-
-        public string CaptchaTokenResponse()
-        {
-            return CaptchaToken;
-        }
     }
 }
