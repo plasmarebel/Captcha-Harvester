@@ -51,11 +51,9 @@ namespace CookieMonster.SpoofBrowser.CaptchaSolver
             }
             catch { }
 
-
-            var rc3 = new RequestContext();
             chromeBrowser = new ChromiumWebBrowser(Site)
             {
-                RequestContext = rc3,
+                RequestContext = new RequestContext();,
                 LifeSpanHandler = new LifeSpanHandler()
             };
 
