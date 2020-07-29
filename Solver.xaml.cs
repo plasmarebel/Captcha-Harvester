@@ -84,8 +84,7 @@ namespace CookieMonster.SpoofBrowser.CaptchaSolver
 
         private void IsSolved()
         {
-            string script = "get_action(this);";
-            chromeBrowser.GetMainFrame().EvaluateScriptAsync(script).ContinueWith(x =>
+            chromeBrowser.GetMainFrame().EvaluateScriptAsync("get_action(this);").ContinueWith(x =>
             {
                 var response = x.Result;
                 if (response.Success && response.Result != null)
@@ -101,8 +100,7 @@ namespace CookieMonster.SpoofBrowser.CaptchaSolver
 
         private void CaptchaResponse()
         {
-            string getToken = "document.getElementById('g-recaptcha-response').value";
-            chromeBrowser.GetMainFrame().EvaluateScriptAsync(getToken).ContinueWith(x =>
+            chromeBrowser.GetMainFrame().EvaluateScriptAsync("document.getElementById('g-recaptcha-response').value";).ContinueWith(x =>
             {
                 var response = x.Result;
                 if (response.Success && response.Result != null)
